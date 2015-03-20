@@ -42,6 +42,12 @@ public class MainActivity extends Activity {
                 dialog.setProgress(0);
                 dialog.show();
             }
+
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                view.loadUrl(url);
+                return true;
+            }
         });
         webView.loadUrl("http://www.manmanwu.cn/appgh/index.php");
     }
